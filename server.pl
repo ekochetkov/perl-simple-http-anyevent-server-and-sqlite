@@ -1,4 +1,5 @@
 use AnyEvent::HTTPD;
+use Data::Dumper;
  
 my $httpd = AnyEvent::HTTPD->new (port => 9090);
  
@@ -7,9 +8,7 @@ $httpd->reg_cb (
       my ($httpd, $req) = @_;
  
       $req->respond ({ content => ['text/html',
-         "<html><body><h1>Hello World!</h1>"
-         . "<a href=\"/test\">another test page</a>"
-         . "</body></html>"
+         Dumper($req)
       ]});
    },
    '/test' => sub {
