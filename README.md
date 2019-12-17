@@ -2,12 +2,15 @@
 
 # Установка модулей
 
-Обязательно от рута, иначе не установятся
-perl -MCPAN -e shell
+`# perl -MCPAN -e shell`
 
-install JSON
-install DBI::SQLite
-install File::Slurp
-install Data::Dumper
-install AnyEvent::HTTP
-install AnyEvent::HTTPD
+* `install JSON`
+* `install DBI::SQLite`
+* `install File::Slurp`
+* `install Data::Dumper`
+* `install AnyEvent::HTTP`
+* `install AnyEvent::HTTPD`
+
+# Запуск
+
+`$ perl server.pl`
